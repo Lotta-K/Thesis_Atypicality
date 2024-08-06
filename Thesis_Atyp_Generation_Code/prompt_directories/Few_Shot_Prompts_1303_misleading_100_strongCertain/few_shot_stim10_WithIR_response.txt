@@ -1,0 +1,5 @@
+X: AI
+Q: Q1
+A: 100% of the time
+R: Thomas mentioned that Olivia used shampoo, which means that this is uncommon behavior. Olivia using it today was unusual enough to prompt Thomas to tell Jill about it.
+

@@ -1,0 +1,10 @@
+You will receive a context (C) and a question (Q1).
+Answer the questions by rating the frequency from 0% of the time to 100% of the time. Give a reasoning for your answer in no more than two sentences.
+Use the following template for your output, where '<>' is a placeholder for content:
+
+Q: <Q1>
+A: <Answer (0%-100%)>
+R: <Reasoning>
+
+STIMULUS
+QUESTION

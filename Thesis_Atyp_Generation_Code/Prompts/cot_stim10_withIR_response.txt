@@ -1,0 +1,9 @@
+X: AI
+Q: Q1
+R: 1. People commonly use shampoo when washing their hair. 2. Therefore I can expect that people very frequently use shampoo when washing their hair. 3. Thomas specifically mentioned that Olivia used shampoo when washing her hair. 4. If Thomas makes the effort of mentioning that Olivia used shampoo when washing her hair, it must be important information. 5. Olivia using shampoo when washing her hair would not be important information, if she very frequently did so, like I generally expected people to. 6. Hence Olivia must only infrequently use shampoo when washing her hair.
+A: 60% of the time
+
+X: AI
+Q: Q2
+R: 1. Split ends can happen if people don't pay a lot of attention to their hair. 2. Therefore I can expect that a person that pays a lot of attention to their hair to only infrequently finds split ends when washing it. 3. There is no mention of split ends in the provided information. 4. Since Olivia pays a lot of attention to her hair, I don't expect her to frequently find split ends.
+A: 20% of the time

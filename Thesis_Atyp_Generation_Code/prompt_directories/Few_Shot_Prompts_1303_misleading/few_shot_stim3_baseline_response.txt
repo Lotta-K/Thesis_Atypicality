@@ -1,0 +1,5 @@
+X: AI
+Q: Q1
+A: 30% of the time
+R: Since there's no use for an empty can of dog food, the normal thing to do is to throw it away. Therefore, Jim likely does so almost every single time.
+

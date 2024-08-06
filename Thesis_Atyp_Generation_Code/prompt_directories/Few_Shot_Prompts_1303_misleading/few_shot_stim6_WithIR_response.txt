@@ -1,0 +1,4 @@
+X: AI
+Q: Q1
+A: 100% of the time
+R: Harvey telling Jen about Lisa bringing a swimsuit makes me think that she doesn't always bring a swimsuit, even though it is what people commonly do. If she did, it would not be worth mentioning.

@@ -1,0 +1,4 @@
+X: AI
+Q: Q1
+A: 100% of the time
+R: The fact that Susan specifically mentioned that John paid makes it clear that it was an unusual occurrence and does not always happen.

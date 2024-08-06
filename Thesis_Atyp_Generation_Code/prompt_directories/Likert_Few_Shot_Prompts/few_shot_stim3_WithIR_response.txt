@@ -1,0 +1,5 @@
+X: AI
+Q: Q1
+A: 4 - Sometimes
+R: Generally, I would expect people to throw away trash like an empty can of dog food. However, the fact that Lucy specifically told Carl about Jim throwing it away, makes me think that Jim's behavior surprised her. Hence, he likely doesn't throw it away at least somewhat frequently.
+

@@ -1,0 +1,8 @@
+You will receive a context (C) and two questions (Q1, Q2).
+Answer the questions by rating the frequency on a scale from 0% of the time to 100% of the time. Explain your answer in no more than two sentences. Always give a definitive answer, even if that means making assumptions and speculating based on common knowledge of human behavior.
+Additionally, tell me how a person that knows the people mentioned in the context would answer the below questions, using the same scale and explaining their answer in no more than two sentences.
+Use the following template for your output, where '<>' is a placeholder for content:
+X: <You or Person>
+Q: <Q1 or Q2>
+A: <Answer>
+R: <Reasoning>

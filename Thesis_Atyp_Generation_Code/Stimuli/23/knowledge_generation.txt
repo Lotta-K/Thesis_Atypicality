@@ -1,0 +1,1 @@
+Generate a script or list that lays out all the steps that are part of getting books at the library. Provide a brief but complete overview of the necessary steps without any further explanations.

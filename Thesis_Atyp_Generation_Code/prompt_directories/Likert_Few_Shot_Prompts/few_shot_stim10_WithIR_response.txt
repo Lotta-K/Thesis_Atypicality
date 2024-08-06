@@ -1,0 +1,5 @@
+X: AI
+Q: Q1
+A: 4 - Sometimes
+R: Thomas mentioned that Olivia used shampoo, which might mean that this is unusual. Even though people generally use shampoo when washing their hair, Olivia might not always do so, which prompted Thomas to tell Jill about her doing it today.
+

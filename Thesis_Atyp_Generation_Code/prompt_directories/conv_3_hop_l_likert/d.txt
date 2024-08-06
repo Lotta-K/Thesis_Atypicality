@@ -1,0 +1,9 @@
+Finally, again considering the provided story "C" and you own observations, answer the following question (Q1).
+Answer the questions by rating the frequency on a scale from 1 to 7 (1 - Never; 2 - Rarely, less than 10% of the time; 3 - Occasionally, 30% of the time; 4 - Sometimes, about 50% of the time; 5 - Frequently, about 70% of the time; 6 - Usually, about 90% of the time; 7 - Every time).
+Use the following template for your output, where '<>' is a placeholder for content:
+
+Q: <Q1>
+A: <Answer (0%-100%)>
+R: <Reasoning>
+
+QUESTION

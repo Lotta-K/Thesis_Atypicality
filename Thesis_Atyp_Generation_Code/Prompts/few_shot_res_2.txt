@@ -1,0 +1,19 @@
+X: AI
+Q: Q1
+A: 100% of the time
+R: Olivia pays a lot of attention to her hair and seems to discuss her hair care routine with others, including using shampoo.
+
+X: AI
+Q: Q2
+A: 50% of the time
+R: Finding split ends is mentioned in a way that suggests it's not a routine occurrence, so it probably doesn't happen every time Olivia washes her hair but fairly regularly as she pays a lot of attention to her hair.
+
+X: Person
+Q: Q1
+A: 100% of the time
+R: If the person knows that Olivia pays a lot of attention to her hair and usually talks about it, they might assume she takes care of her hair meticulously which involves shampooing her hair regularly.
+
+X: Person
+Q: Q2
+A: 50% of the time
+R: If they know Olivia and the fact that she pays lots of attention to her hair, they might assume she checks her hair for split ends often, but doesn't always find them, hence the surprise when she does find some.

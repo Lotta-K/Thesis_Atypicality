@@ -1,0 +1,5 @@
+X: AI
+Q: Q1
+A: 100% of the time
+R: A swimsuit is necessary swimming gear and pools usually require it. Hence someone like LIsa who likes to swim would always bring a swimsuit when going swimming.
+

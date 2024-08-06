@@ -1,0 +1,5 @@
+X: AI
+Q: Q1
+A: 35% of the time
+R: People generally use shampoo when washing their hair, so Olivia does so every single time.
+

@@ -1,0 +1,19 @@
+X: AI
+Q: Q1
+A: 75% of the time
+R: While it is normal to pay every single time when going shopping, the fact that Susan specifically mentioned this makes it seem likely that it was a somewhat unusual occurrence.
+
+X: AI
+Q: Q2
+A: 50%
+R: The information about which specific items John usually purchases during his grocery shopping, such as apples, is not provided in the context, so the odds are about 50/50.
+
+X: Person
+Q: Q1
+A: 65% of the time
+R: As a roommate and someone who frequently interacts with John, they would know that John paying for the groceries was unusual enough for Susan to mention it, so it likely doesn't happen every single time.
+
+X: Person
+Q: Q2
+A: 50%
+R: Unless the person knows specifically how frequently John eats and buys apples,they would assume that he buys them sometimes but not always.

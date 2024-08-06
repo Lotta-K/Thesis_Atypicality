@@ -1,0 +1,6 @@
+Q1: Is any part of the direct speech superfluous or unnecessary?
+Q2: Could the direct speech be shortened without losing necessary information?
+Q3: Does the direct speech contain any redundancies?
+Q4: Does the context (C) contain any redundancies?
+Q5: The direct speech contains redundant information. Can you identify the redundancy and elaborate why it is one?
+Q6: The direct speech contains seemingly redundant information. Can you identify what I mean and explain why the speaker made the effort of conveying this information?

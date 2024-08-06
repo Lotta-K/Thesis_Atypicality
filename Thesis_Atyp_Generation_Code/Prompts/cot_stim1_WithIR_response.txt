@@ -1,0 +1,10 @@
+X: AI
+Q: Q1
+R: 1. People commonly pay the cashier when grocery shopping. 2. Therefore I can expect that people very frequently pay the cashier when grocery shopping. 3. Susan specifically mentioned that John paid the cashier when grocery shopping. 4. If Susan makes the effort of mentioning that John paid the cashier when grocery shopping, it must be important information. 5. John paying the cashier when grocery shoppig would not be important information, if he very frequently did so, like I generally expected people to. 6. Hence John must only infrequently pay the cashier when grocery shopping. 
+A: 65% of the time
+
+X: AI
+Q: Q2
+R: 1. People can get apples when grocery shopping, but it is not necessary and whether they do may depend on a lot factors. 2. Therefore I cannot expect a frequency at which people generally get apples when grocery shopping. 3. There is no mention of buying apples in the provided information. 4. Since I have no information about John's apple buying habits and there's no generally expected frequency at which people buy apples, I expect John to get them sometimes.
+A: 40%
+

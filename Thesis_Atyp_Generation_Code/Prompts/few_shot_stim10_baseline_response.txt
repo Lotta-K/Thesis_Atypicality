@@ -1,0 +1,19 @@
+X: AI
+Q: Q1
+A: 95% of the time
+R: Shampoo is commonly used by people to wash their hair, so there is no reason to believe it would be any different for Olivia. Therefore, she uses it most of the time.
+
+X: AI
+Q: Q2
+A: 50% of the time
+R: Finding split ends is mentioned in a way that suggests it's not a routine occurrence, so it probably doesn't happen every time Olivia washes her hair but fairly regularly as she pays a lot of attention to her hair.
+
+X: Person
+Q: Q1
+A: 90% of the time
+R: While it is possible to wash hair without shampoo, someone who knows Olivia and the care she has for her hair would know that she uses shampoo most of the time when washing her hair.
+
+X: Person
+Q: Q2
+A: 50% of the time
+R: If they know Olivia and the fact that she pays lots of attention to her hair, they might assume she checks her hair for split ends often, but doesn't always find them, hence the surprise when she does find some.

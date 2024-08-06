@@ -1,0 +1,4 @@
+X: AI
+Q: Q1
+A: 5 - Frequently
+R: While it is normal to pay every single time when going shopping, the fact that Susan specifically mentioned this makes it seem likely that it was a somewhat unusual occurrence.

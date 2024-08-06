@@ -1,0 +1,5 @@
+X: AI
+Q: Q1
+A: 100% of the time
+R: Since Lucy specifically told Carl about Jim throwing the can away, shows me that Jim's behavior surprised her. Hence, he doesn't usually throw it away.
+

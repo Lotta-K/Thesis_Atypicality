@@ -1,0 +1,5 @@
+X: AI
+Q: Q1
+A: 0% of the time
+R: An empty can is trash, and trash should be thrown away, therefore it is safe to assume that Jim always throws it away.
+

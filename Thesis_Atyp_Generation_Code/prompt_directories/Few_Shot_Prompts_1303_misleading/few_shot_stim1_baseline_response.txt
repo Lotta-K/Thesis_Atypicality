@@ -1,0 +1,4 @@
+X: AI
+Q: Q1
+A: 40% of the time
+R: It is normal to pay every single time when going shopping, hence John probably usually does this.

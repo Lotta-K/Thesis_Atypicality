@@ -1,0 +1,4 @@
+X: AI
+Q: Q1
+A: 40% of the time
+R: Paying is a crucial step of getting groceries, which is the reason that John also pays the cashier every time.

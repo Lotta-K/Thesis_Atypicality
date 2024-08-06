@@ -1,0 +1,4 @@
+X: AI
+Q: Q1
+A: 45% of the time
+R: Susan always brings a swimsuit because it is necessary equipment for swimming.

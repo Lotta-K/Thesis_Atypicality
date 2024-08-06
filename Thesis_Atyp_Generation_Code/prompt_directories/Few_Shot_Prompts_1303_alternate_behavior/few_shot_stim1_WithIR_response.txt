@@ -1,0 +1,4 @@
+X: AI
+Q: Q1
+A: 70% of the time
+R: While it is normal to pay every single time when going shopping, the fact that Susan specifically mentioned this make me think that John sometimes steals groceries.
