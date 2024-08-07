@@ -1,0 +1,15 @@
+"";"model";"anno_level1";"anno_level2_1";"anno_level2_2";"n";"count";"perc"
+"1";"llama3_instruct";"atyp";"noutt_elab";NA;1;24;4,16666666666667
+"2";"llama3_instruct";"atyp";"utt_elab";NA;1;24;4,16666666666667
+"3";"llama3_instruct";"no_atyp";"normal";NA;4;24;16,6666666666667
+"4";"llama3_instruct";"no_atyp";"reinforced-utt";NA;9;24;37,5
+"5";"llama3_instruct";"no_atyp";"sk";"reinforced-utt";2;24;8,33333333333333
+"6";"llama3_instruct";"no_atyp";"sk";NA;6;24;25
+"7";"llama3_instruct";"unclear";"other";NA;1;24;4,16666666666667
+"8";"mixtral";"atyp";"utt_concise";NA;1;24;4,16666666666667
+"9";"mixtral";"error";NA;NA;1;24;4,16666666666667
+"10";"mixtral";"no_atyp";"reinforced-utt";"normal";2;24;8,33333333333333
+"11";"mixtral";"no_atyp";"reinforced-utt";NA;10;24;41,6666666666667
+"12";"mixtral";"no_atyp";"sk";"reinforced-utt";1;24;4,16666666666667
+"13";"mixtral";"no_atyp";"sk";NA;8;24;33,3333333333333
+"14";"mixtral";"unclear";"other";NA;1;24;4,16666666666667
