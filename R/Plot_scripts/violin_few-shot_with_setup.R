@@ -1,31 +1,28 @@
 rm(list=ls())
 library(rstudioapi)
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 library(ggplot2)
-library(xlsx)
 library(dplyr)
 library(tidyr)
-library(stringr)
-library(readxl)
 library(tidyverse)
-library(Rmisc) # for summarySE 
-library(anytime) # for timestamps to tracks wrongly inserted IDs
-library(lme4) 
-library(lmerTest)
 library(gtools) 
-library(stringi)
-
-full_data = read_csv("all_thesis_hop_reasoning.csv")
-
-#full_data <- mixtral_hop_reasoning
-
-#full_data <- do.call("rbind", list(full_clean_data_with_t, llama3_full_zs, mixtral_zs))
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 
-for_plot  = filter(full_data, (setting == 1 | setting == 2 | setting ==3 | setting == 4)& conv == "c")
+full_data = read_csv("full_fs_cmcl.csv")
+full_data <- subset(full_data, select = -c(...3) )
+full_data <- rbind(full_data, mixtral_fs)
+
+#full_data$setup[full_data$setting == 1]<- "base"
+
+a <- mixtral_fs_crit_noncrit
+b <- llama3_full_fs_crit_non_crit
+c <- gpt3_full_fs_march_crit_nom_crit
+d <- gpt4_full_fs_march_crit_non_crit
+
+full_data <- do.call("rbind", list(a,b,c,d))
 
 
-
+for_plot  = filter(full_data, (setting == 1 | setting == 2 | setting ==3 | setting == 4) & (setup == "high"| setup == "low") )
 
 for_plot$condition = 0
 for_plot$world     = 0
@@ -34,7 +31,7 @@ for_plot$condition[for_plot$setting == 3 | for_plot$setting == 4] = "after"
 for_plot$world[for_plot$setting == 1 | for_plot$setting == 3]     = "ordinary"
 for_plot$world[for_plot$setting == 2 | for_plot$setting == 4]     = "wonky"
 
-exc.habitual.data_plot = filter(for_plot, Q == 1)
+exc.habitual.data_plot = for_plot #filter(for_plot, prompt_method == "few_shot" & Q == 1)
 
 exc.habitual.data_plot$world     = factor(exc.habitual.data_plot$world, 
                                           levels=c("wonky", "ordinary"))
@@ -45,7 +42,7 @@ exc.habitual.data_plot = exc.habitual.data_plot %>% dplyr::filter(world=="ordina
 
 dodge = position_dodge(width = 0.85)
 
-exc.habitual.summary = exc.habitual.data_plot %>% dplyr::group_by(conv, world, condition, model) %>% dplyr::summarise(val = mean(A_clean))
+exc.habitual.summary = exc.habitual.data_plot %>% dplyr::group_by(world, condition, setup, model) %>% dplyr::summarise(val = mean(A_clean))
 
 # define short names for LLMs according to the paper:
 model.labs        = c("GPT-3.5-t", "GPT-4", "Llama 3", "Mixtral")
@@ -53,16 +50,21 @@ names(model.labs) = c("gpt-3.5-turbo", "gpt-4", "llama3_instruct", "mixtral")
 
 p.ordinary.habit = ggplot(exc.habitual.data_plot, aes(x = world, y = A_clean, fill = condition)) + 
   geom_violin(position = dodge, scale="count") +
-  ## here commented out because boxplots are very tiny:  
   ## outlier.size - to change the size of the outliers, 
-  ## size         - to change how thick the borders of the boxplots are
-  # geom_boxplot(outlier.size = 8, width=.175, aes(fill=NULL,group=interaction(world,condition)),
-  #              fill="white", position = dodge, size = 1) +
+  ## size         - to change how thick the borders of the boxplots are:
+  geom_boxplot(outlier.size = 8, width=.175, aes(fill=NULL,group=interaction(world,condition)),
+               fill="white", position = dodge, size = 1) +
   ## stroke - to make the white borders thicker, 
   ## size   - to increase the size of the mean point,
   ## color  - to make white borders of the mean point:
   geom_point(data = exc.habitual.summary, aes(y = val), position = dodge,
-             shape = 21, size = 12, colour = "white", stroke = 3) +
+             shape=21, size = 12, colour = "white", stroke = 3) +
+  ## add an arrow to mark a significant difference between the utterance conditions in gpt-4:
+  geom_line(data = filter(exc.habitual.summary, world=="ordinary", model== "gpt-4"),
+            aes(y = val, group = world),
+            position = position_dodge(width = 1),
+            arrow = arrow(angle = 25, ends = "first", type = "closed",
+                          length = unit(1, "cm")))+
   ylab("Typicality ratings") +
   xlab("") +
   theme(legend.position="bottom") +
@@ -73,14 +75,12 @@ p.ordinary.habit = ggplot(exc.habitual.data_plot, aes(x = world, y = A_clean, fi
                      labels = c("0","25","50","75","100"),limits = c(0,100)) + 
   scale_x_discrete(labels = c("","")) + 
   coord_flip()+
-  facet_grid(~model, labeller=labeller(model = model.labs))+
+  facet_grid(setup~model, labeller=labeller(model = model.labs))+
   theme(panel.spacing.x = unit(10, "mm"))
 p.ordinary.habit
 
 
-
-
-png(paste("", "thesis_c-conv_violin.png", sep = ""), width = 2500, height = 1142)
+png(paste("", "Setup_thesis_violin_fewshot.png", sep = ""), width = 2500, height = 1142)
 p.ordinary.habit +
   theme(axis.text.x  = element_text(size = 40, colour = "black"),
         axis.text.y  = element_text(size = 60, colour = "black"),
@@ -92,4 +92,5 @@ p.ordinary.habit +
         strip.text.y = element_text(size = 65), # size of the facet labels 
         plot.title   = element_blank()) # remove title
 dev.off()
+
 
