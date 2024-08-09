@@ -5,16 +5,14 @@
 #### LOADING ####
 
 
-calib <- clean_2024_05_27_14_28_gpt_3_5_turbo_t_1_calib_zero_shot_fr_calibration
-calib <- clean_2024_05_27_14_32_llama3_instruct_t_0_6_calib_zero_shot_fr_calibration
-calib <- clean_2024_06_06_14_20_gpt_4_t_1_calib_zero_shot_fr
-calib <- clean_2024_06_06_17_29_gpt_4_t_1_calib_zero_shot_fr
-calib <- clean_2024_06_07_16_12_gpt_3_5_turbo_t_1_calib_conv_fr
-calib <- clean_2024_06_07_16_05_gpt_3_5_turbo_t_1_calib_conv_fr
-calib <- clean_2024_06_07_15_03_gpt_3_5_turbo_t_1_calib_zero_shot_fr
-calib <- clean_2024_06_07_16_30_gpt_4_t_1_calib_conv_fr
+calib <- read_csv("Data/Robustness/Calibration/clean_2024_05_27_14_32_llama3_instruct_t_0_6_calib_zero_shot_fr_calibration.csv")
 
-calib <- clean_2024_07_01_21_06_mixtral_t_0_6_calib_zero_shot_fr)
+calib <- read_csv("Data/Robustness/Calibration/clean_2024_06_06_17_29_gpt_4_t_1_calib_zero_shot_fr.csv")
+
+calib <- read_csv("Data/Robustness/Calibration/clean_2024_06_07_15_03_gpt_3_5_turbo_t_1_calib_zero_shot_fr.csv")
+
+
+calib <- read_csv("Data/Robustness/Calibration/clean_2024_07_01_21_06_mixtral_t_0_6_calib_zero_shot_fr.sv")
 
 
 
@@ -114,6 +112,9 @@ overview
 ###### Analysis #####
 
 
+##MEANS
+
+
 means <- new %>%
   group_by(setting) %>%
   dplyr::summarize(mean_A = mean(A_clean), sd_A = sd(A_clean))
@@ -123,10 +124,11 @@ means
 
 
 
+### PAIRED T_TEST
+
+## Change out settings == , and Q== for other tests)
 
 
-
-# HIGH -->*
 all.sig <-filter(new, Q == 1 & (setting ==1 |setting ==3)) %>% 
   t_test(A_clean~setting, detailed =TRUE, paired = TRUE) %>%
   add_significance()
