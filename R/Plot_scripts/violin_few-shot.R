@@ -1,20 +1,23 @@
-rm(list=ls())
-library(rstudioapi)
-library(ggplot2)
-library(dplyr)
-library(tidyr)
-library(tidyverse)
-library(gtools) 
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+#### DATA LOADING
+
+## regular few shot
+
+a <- read_csv("Data/Few_Shot/mixtral_fs.csv")
+b <- read_csv("Data/Few_Shot/llama3_full_fs_normal.csv")
+c <- read_csv("Data/Few_Shot/gpt3_full_fs.csv")
+d <- read_csv("Data/Few_Shot/gpt4_full_fs.csv")
+
+full_data <- do.call("rbind", list(a,b,c,d))
 
 
-full_data = read_csv("full_fs_cmcl.csv")
+### perturbation
 
-full_data = read_csv("gpt4_turbo_full_fs_march.csv")
+a <- read_csv("Data/Few_Shot/mixtral_fs_crit-noncrit.csv")
+b <- read_csv("Data/Few_Shot/llama3_full_fs_crit_non-crit.csv")
+c <- read_csv("Data/Few_Shot/gpt3_full_fs_crit_non-crit.csv")
+d <- read_csv("Data/Few_Shot/gpt4_full_fs_crit_non-crit.csv")
 
-
-full_data <- subset(full_data, select = -c(...3) )
-full_data <- rbind(full_data, mixtral_fs)
+full_data <- do.call("rbind", list(a,b,c,d))
 
 
 for_plot  = filter(full_data, (setting == 1 | setting == 2 | setting ==3 | setting == 4) & (setup == "high"| setup == "low") )

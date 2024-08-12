@@ -2,10 +2,10 @@
 
 # read  in the new data with different temperatures
 # t= 0
-data1 <- read_csv("C:/Users/charl/PycharmProjects/Thesis_GPT/Clean_Data_for_R_new/clean_2024-03-04_20-00_gpt-3.5-turbo_t-0_zero_shot_fr.csv")
-data2 <- read_csv("C:/Users/charl/PycharmProjects/Thesis_GPT/Clean_Data_for_R_new/clean_2024-03-05_18-43_gpt-3.5-turbo_t-0_zero_shot_fr.csv")
+data1 <- read_csv("Data/Zero_Shot/zs_temperature_tests/clean_2024-03-04_20-00_gpt-3.5-turbo_t-0_zero_shot_fr.csv")
+data2 <- read_csv("Data/Zero_Shot/zs_temperature_tests/clean_2024-03-05_18-43_gpt-3.5-turbo_t-0_zero_shot_fr.csv")
 # t = 1.3
-data3 <- read_csv("C:/Users/charl/PycharmProjects/Thesis_GPT/Clean_Data_for_R_new/clean_2024-03-05_18-53_gpt-3.5-turbo_t-1.3_zero_shot_fr.csv")
+data3 <- read_csv("Data/Zero_Shot/zs_temperature_tests/clean_2024-03-05_18-53_gpt-3.5-turbo_t-1.3_zero_shot_fr.csv")
 
 #bind t = 0 data in one frame
 data_t0 <- rbind(data1, data2)
@@ -13,11 +13,11 @@ data_t0 <- rbind(data1, data2)
 
 ######## GPT4 data
 
-data4 <- read_csv("C:/Users/charl/PycharmProjects/Thesis_GPT/Clean_Data_for_R_new/clean_2024-03-12_16-27_gpt-4_t-0_zero_shot_temp_test_setting1_3.csv")
+data4 <- read_csv("Data/Zero_Shot/zs_temperature_tests/clean_2024-03-12_16-27_gpt-4_t-0_zero_shot_temp_test_setting1_3.csv")
 #### -->> processing at the bottom
 
 # read in full old data
-data <- read_csv("C:/Users/charl/PycharmProjects/Thesis_GPT/Thesis_GPT_R/full_clean_data_with_t.csv")
+data <- read_csv("Data/Zero_Shot/zs_temperature_tests/full_clean_data_with_t.csv")
 # extract relevant comparison data
 data_old <- filter(data, model == "gpt-3.5-turbo" & prompt_method== "zero_shot")
 
@@ -200,9 +200,9 @@ comp5.test
 
 ##### check annotations script for temperature tests
 
-anno1 <- read_excel("C:/Users/charl/PycharmProjects/Thesis_GPT/Thesis_GPT_R/0307_gpt3_t0_zs_annotations.xlsx", sheet = 1)
-anno2 <- read_excel("C:/Users/charl/PycharmProjects/Thesis_GPT/Thesis_GPT_R/0307_gpt3_t0_zs_annotations.xlsx", sheet = 2)
-anno3 <- read_excel("C:/Users/charl/PycharmProjects/Thesis_GPT/Thesis_GPT_R/0309_gpt3_t13_zs_annotations.xlsx", sheet = 1)
+anno1 <- read_excel("Data/Zero_Shot/zs_temperature_tests/0307_gpt3_t0_zs_annotations.xlsx", sheet = 1)
+anno2 <- read_excel("Data/Zero_Shot/zs_temperature_tests/0307_gpt3_t0_zs_annotations.xlsx", sheet = 2)
+anno3 <- read_excel("Data/Zero_Shot/zs_temperature_tests/0309_gpt3_t13_zs_annotations.xlsx", sheet = 1)
 
 annodata <- rbind(anno1, anno2)
 annodata <- rbind(annodata, anno3)
@@ -222,4 +222,4 @@ overview <- annodata %>%
   group_by(model, prompt_method, extra, anno_level1, anno_level2_1, anno_level2_2)%>% tally()
 
 
-write.csv2(overview, "C:/Users/charl/PycharmProjects/Thesis_GPT/Thesis_GPT_R/anno_distib_fs.csv")
+write.csv2(overview, "Data/Zero_Shot/zs_temperature_tests/anno_distib_fs.csv")

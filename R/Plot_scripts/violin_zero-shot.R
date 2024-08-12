@@ -1,31 +1,15 @@
-rm(list=ls())
-library(rstudioapi)
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-library(ggplot2)
-library(xlsx)
-library(dplyr)
-library(tidyr)
-library(stringr)
-library(readxl)
-library(tidyverse)
-library(Rmisc) # for summarySE 
-library(anytime) # for timestamps to tracks wrongly inserted IDs
-library(lme4) 
-library(lmerTest)
-library(gtools) 
-library(stringi)
+### DATA LOADing
 
-full_data = read_csv("full_clean_data.csv")
+a <- read.csv("Data/Zero_Shot/all_gpts_zs.csv")
+b <- read.csv("Data/Zero_Shot/llama3_full_zs.csv")
+c <- read.csv("Data/Zero_Shot/mixtral_zs.csv")
 
-full_data = subset(full_data, model =="gpt-4-1106-preview" )
+data <- do.call("rbind", list(a,b,c))
+
+data<- subset(data, !is.na(A_clean))
 
 
-model.labs        = c("GPT-4-turbo")
-names(model.labs) = c("gpt-4-1106-preview")
 
-full_data <- data
-
-full_data <- do.call("rbind", list(full_clean_data_with_t, llama3_full_zs, mixtral_zs))
 for_plot  = filter(full_data, setting == 1 | setting == 2 | setting ==3 | setting == 4)
 
 

@@ -1,4 +1,11 @@
 
+### Probing Data distribution STEP1
+
+#load data
+STEP1_DISTRIB <- read_excel("Data/Annotated/Distribution_data_for_plots_and_tables/STEP1_DISTRIB.xlsx")
+
+## transform for processing
+
 df_long <- gather(STEP1_DISTRIB, key = "Model", value = "Value", -Q, -Category)
 
 # Update category labels

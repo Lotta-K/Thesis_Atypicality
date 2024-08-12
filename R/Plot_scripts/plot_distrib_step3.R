@@ -1,3 +1,9 @@
+### Probing Data distribution STEP3
+
+#load data
+STEP3_DISTRIB <- read_excel("Data/Annotated/Distribution_data_for_plots_and_tables/STEP3_DISTRIB.xlsx")
+
+## transform for processing
 
 df_long <- gather(STEP3_DISTRIB, key = "Model", value = "Value", -Q, -Category)
 
