@@ -1,25 +1,7 @@
-rm(list=ls())
-library(rstudioapi)
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-library(ggplot2)
-library(xlsx)
-library(dplyr)
-library(tidyr)
-library(stringr)
-library(readxl)
-library(tidyverse)
-library(Rmisc) # for summarySE 
-library(anytime) # for timestamps to tracks wrongly inserted IDs
-library(lme4) 
-library(lmerTest)
-library(gtools) 
-library(stringi)
+## DATA Loading
 
 full_data = read_csv("all_thesis_hop_reasoning.csv")
 
-#full_data <- mixtral_hop_reasoning
-
-#full_data <- do.call("rbind", list(full_clean_data_with_t, llama3_full_zs, mixtral_zs))
 
 
 for_plot  = filter(full_data, (setting == 1 | setting == 2 | setting ==3 | setting == 4)& conv == "c")
